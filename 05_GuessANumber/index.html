@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">    
+  <head>
+    <title>Home</title>
+    <meta charset="UTF-8" />
+   
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body> 
+    <nav>
+      <a href="https://github.com/hiteshchoudhary/js-hindi-youtube/blob/main/07_projects/projectsset1.md" aria-current="page">Codes</a>
+      <a href="https://www.youtube.com/watch?v=_TjtAyMkiTI&t=7132s">Chai Aur Code Channel</a>
+    </nav>
+    <main>
+      <div id="wrapper">
+        <h1>Number guessing game</h1>
+      <p>Try and guess a random number between 1 and 100.</p>
+      <p>You have 10 attempts to guess the right number.</p>
+      </br>
+          <form class="form">
+              <label2 for="guessField" id="guess">Guess a number</label>
+              <input type="text" id="guessField" class="guessField">
+              <input type="submit" id="subt" value="Submit guess" class="guessSubmit">
+          </form>
+  
+          <div class="resultParas">
+              <p >Previous Guesses: <span class="guesses"></span></p>
+              <p >Guesses Remaining: <span class="lastResult">10</span></p>
+              <p class="lowOrHi"></p>
+          </div>
+      </div>
+    </main>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
