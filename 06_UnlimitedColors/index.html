@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Home</title>
+    <meta charset="UTF-8" />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Chai aur javascript</h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+
+    <script>
+      const hex = '0123456789ABCDEF';
+      let change;
+      document.querySelector('#start').addEventListener('click', function (e) {
+        console.log('hi');
+
+        const hey = function () {
+          let bgcolor = '#';
+          for (let i = 0; i < 6; i++) {
+            bgcolor += hex[Math.floor(Math.random() * 16)];
+          }
+          console.log(bgcolor);
+          document.body.style.backgroundColor = bgcolor;
+        };
+        console.log(`what change ${change}`);
+        console.log(`what !change ${!change}`);
+        if(!change){
+          change = setInterval(hey, 1000);
+        }
+      });
+
+      document.querySelector('#stop').addEventListener('click', function (e) {
+        clearInterval(change);
+        console.log(`what change ${change}`);
+        change=null; 
+      });
+    </script>
+  </body>
+</html>
