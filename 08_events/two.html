@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="\navStyle.css" />
+  </head>
+  <body>
+    <nav>
+      <a href="/" aria-current="page">Home</a>
+    </nav>
+    <h1>Chai aur code</h1>
+    <button>stop</button>
+    <script>
+      const handler = function () {
+        console.log('hii');
+      };
+      const textChange=function(){document.querySelector('h1').innerHTML=`cummon cummon baby radio on`;}
+      const changeMe=setTimeout(textChange, 5000);
+      document.querySelector('button').addEventListener('click', function(e){
+        clearTimeout(changeMe);
+        console.log('stopped');
+      });
+    </script>
+  </body>
+</html>
